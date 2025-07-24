@@ -38,6 +38,7 @@ test.describe('Todo App UI Tests', () => {
   test('Redirects to todos on valid login', async ({ page }) => {
     await login(page, VALID_USER);
     await expect(page.getByRole('heading', { name: /todo list/i })).toBeVisible();
+    await expect(page).toHaveScreenshot('todo-list-after-login.png');
   });
 
   test('Rejects empty login form', async ({ page }) => {
@@ -52,12 +53,15 @@ test.describe('Todo App UI Tests', () => {
     const todoText = 'Buy milk';
     const todoItem = await addTodo(page, todoText);
     const todoId = await getTodoId(todoItem);
+    await expect(page).toHaveScreenshot('after-add-todo.png');
+
 
     // Edit
     await page.getByTestId(`edit-button-${todoId}`).click();
     await page.getByTestId(`edit-input-${todoId}`).fill('Buy bread');
     await page.getByTestId(`save-button-${todoId}`).click();
     await expect(page.getByTestId(`todo-${todoId}`)).toContainText('Buy bread');
+    await expect(page).toHaveScreenshot('after-edit-todo.png');
 
     // Cancel edit
     await page.getByTestId(`edit-button-${todoId}`).click();
@@ -68,6 +72,7 @@ test.describe('Todo App UI Tests', () => {
     // Delete
     await page.getByTestId(`delete-button-${todoId}`).click();
     await expect(page.locator(`li[data-testid="todo-${todoId}"]`)).toHaveCount(0);
+    await expect(page).toHaveScreenshot('after-delete-todo.png');
   });
 
   test('Trims whitespace from new todo input', async ({ page }) => {
