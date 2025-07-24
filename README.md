@@ -48,7 +48,7 @@ cd todo-app
 
 ---
 
-## 🔧 Backend Setup
+## Backend Setup
 
 ### Navigate to the backend directory:
 
@@ -79,7 +79,7 @@ npm test
 
 ---
 
-## 💻 Frontend Setup
+## Frontend Setup
 
 ### Navigate to the frontend directory:
 
