@@ -42,8 +42,8 @@ A simple full-stack **Todo application** with user login, CRUD functionality, an
 ### 1. Clone the Repository
 
 ```bash
-git clone "https://github.com/shruthy1494/testifytasks"
-cd todo-app
+git clone https://github.com/shruthy1494/testifytasks
+cd testifytasks
 ````
 
 ---
