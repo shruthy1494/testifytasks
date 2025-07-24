@@ -99,7 +99,10 @@ npm install
 npm run dev
 ```
 
-By default, the frontend runs on:
+The frontend runs on:
+`http://localhost:3000`
+
+The backend runs on:
 `http://localhost:3001`
 
 ### Run UI Tests:
