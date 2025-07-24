@@ -56,6 +56,3 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Stop background server
-        run: kill $(lsof -t -i:3000)
-
