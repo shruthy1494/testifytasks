@@ -1,4 +1,4 @@
-# Todo App – Full Stack Project
+# Testify tasks - Full stack project
 
 A simple full-stack **Todo application** with user login, CRUD functionality, and automated tests.
 
